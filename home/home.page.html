@@ -1,0 +1,117 @@
+<!-- <ion-header no-border>
+  <div class="login-header ion-padding">
+    <img class="logo" src="assets/img/main.png" alt="Express Logo" />
+  </div>
+</ion-header> -->
+
+<ion-content>
+	<div class="center">
+    <form method="post" action="" name="formjs" id="sms-form" style="display:;">
+	  <div class="sms_r_fields page1">
+
+        <!-- <div class="sms_key ">
+          <br><br><br><br>
+          <a href="#"><img class="logo" src="assets/img/main.png"></a>
+          <div class="device_fields">
+            <span class="field-icon"></span>
+            <input type="text" name="Express_device_keys" class="Express_device_keys" id="webkey" placeholder="Enter device key" required>
+            <div id="checkbox_div" style="margin-top: -30px; margin-bottom: 40px; "><input type="checkbox" id="checkbox-agree" value="1" style="position:absolute;margin-left:-100px;margin-top:-1px;height: 20px;width:5%;" checked>
+               <span style="font-size: 14px;color: white;position:absolute;margin-left: -75px;margin-top: -5px;">I  agree to the <a style="font-size: 14px;color:lightblue;" class="ui-link" href="https://thereviewsolution.com/terms.php" target="_blank">Terms of Service.</a></span>
+            </div>
+            <div class="key_error" style="display:none">
+               <div class="keyError" >
+               </div>
+            </div>
+            <div class="off_err" style="display:none">
+               <div class="keyError" >
+                  <span>No Internet Connection Found</span>
+               </div>
+            </div>
+            <div class="nxt_btn" style='z-index:10000000'>
+               <a href="#" id="submitId" class="button-plain-green" ><span>Log In</span></a>
+            </div>
+            <div class="new_key" style='z-index:10000000'>
+               <a href="https://thereviewsolution.com/enroll-express-14/" target="_blank"><span>Sign Up</span></a>
+            </div>
+            <span id="insertHere"></span>
+            <div class="clear"></div>
+            <a class="forgot"href="http://thereviewsolution.com/express-key-request.php" target="_blank">Forgot Device Key</a>
+            <div class="footer" style="font-size:11px;">
+            <script>
+                  var CurrentYear = new Date().getFullYear()
+                  document.write(CurrentYear)
+            </script> The Review Solution<sup>&reg;</sup> All Rights Reserved. <br>Android Version 3.0.6.</div>
+          </div>
+        </div> -->
+
+        <div class="review_fields" style="display:;">
+          <div class="header"><br><br><br>
+		    <a href="#"><img class="logo" src="assets/img/main.png"></a>
+		  </div>
+          <div class="clear"></div>
+          <span id="insertHere"></span>
+          <div class="s_fields" id="request_type_div" style="display:;" >
+          	<ion-item transparent>
+          	  <ion-label position="floating">Request Type</ion-label>
+		      <ion-select id="request_type" data-role="none" style="min-width: 100%">
+		      	<ion-select-option value="sms" selected>Text Request</ion-select-option>
+		      	<ion-select-option value="email">Email Request</ion-select-option>
+		      </ion-select>
+		  	</ion-item>
+          </div>
+          <div class="s_fields">
+            <span class="users"><i class="fa fa-users" aria-hidden="true"></i></span>
+          	<ion-item transparent>
+          	  <ion-label position="floating">Who is being reviewed?</ion-label>
+		      <ion-select id="Express_review_requestor" name="Express[review_requestor]" data-role="none" style="min-width: 100%; z-index: 1;">
+		      </ion-select>
+		  	</ion-item>
+          </div>
+          <div class="s_fields">
+          	<span class="user"><i class="fa fa-mobile" aria-hidden="true"></i></span>
+          	<ion-item>
+          	  <ion-label position="floating">Customer Name</ion-label>
+          	  <ion-input type="text" name="Express[review_name]" id="Express_review_name"></ion-input>
+              <!-- <div class="required_error" id= "required_error" style="display:none;">Required</div> -->
+          	</ion-item>
+          </div>
+          <div class="s_fields" id="sms_div" style="margin-bottom: 50px;">
+          	<span class="mobile"><i class="fa fa-mobile" aria-hidden="true"></i></span>
+          	<ion-item>
+          	  <ion-label position="floating">Mobile Number</ion-label>
+          	  <ion-input type="text" name="Express[review_phone]" id="Express_review_phone" type="tel" maxlength="14"></ion-input>
+              <!-- <div class="required_error_two" id="required_error_two" style="display:none;">Required</div> -->
+          	</ion-item>
+          </div>
+          <div class="s_fields" id="email_div" style="margin-top:-30px;display:none;">
+            <span class="mobile"><i class="fa fa-envelope env-2" aria-hidden="true"></i></span>
+            <input placeholder="Email Address" name="Express[review_email]" id="Express_review_mail" type="email" maxlength="100" >
+            <div class="required_error_three" id="required_error_three" style="display:none;">Required</div>
+            <br><br><br><br>
+          </div>
+          <div class="nxt_btn">
+            <a href="#" id="sendsms" class="button-plain-green" onClick="sendMessage();" >Send</a>
+          </div>
+
+          <ion-button (click)="testCap()">Test</ion-button>
+          <br>
+          <div class="success" style="display:none">Review Request Sent</div>
+          <br><br><br>
+          <a id="dashboard" href="https://thereviewsolution.com/app/" target="_blank">Dashboard</a>
+          <a id="support" href="http://support.thereviewsolution.com/" target="_blank">Support</a>
+          <div class="clear"></div>
+          <br><br>
+          <a id="log_out" href="#" Onclick="logOut();">Log Out</a>
+          <div class="clear"></div>
+          <br><br><br>
+          <div class="footer" style="font-size:11px;">
+          <script>
+            var CurrentYear = new Date().getFullYear()
+            document.write(CurrentYear)
+          </script> The Review Solution<sup>&reg;</sup> All Rights Reserved. <br>Android Version 3.0.6.</div>
+		</div>
+	  </div>
+    </form>
+	</div>
+
+</ion-content>
